@@ -3,6 +3,7 @@ import React, { lazy, Suspense } from 'react';
 // import { Two } from './Two';
 // import { Three } from './Three';
 
+// Important: "lazy" only works with export default
 const One = lazy(() => import('./One'));
 const Two = lazy(() => import('./Two'));
 const Three = lazy(() => import('./Three'));
