@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 export const Articles = () => {
 	const [articles, setArticles] = useState();
 
-	useEffect(() => {
-		fetch('/api/articles')
-			.then(response => response.json())
-			.then(data => setArticles(data));
-	}, []);
+    useEffect(() => {
+        fetch('/api/articles')
+        .then(response => response.json())
+        .then(data => setArticles(data))
+    }, []);
 
 	return (
 		<>

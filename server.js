@@ -12,14 +12,31 @@ const app = express();
 app.use(express.static('./build', { index: false }))
 
 const articles = [
-	{ title: 'Article 1', author: 'Bob' },
-	{ title: 'Article 2', author: 'Betty' },
-	{ title: 'Article 3', author: 'Frank' },
+    {
+        title: 'Article 1',
+        author: 'John',
+    },
+    {
+        title: 'Article 2',
+        author: 'Bob',
+    },
+    {
+        title: 'Article 3',
+        author: 'Frank',
+    },
+    {
+        title: 'Article 4',
+        author: 'Alissa',
+    },
+    {
+        title: 'Article 5',
+        author: 'Mary',
+    },
 ];
 
 app.get('/api/articles', (req, res) => {
-	const loadedArticles = articles;
-	res.json(loadedArticles);
+    const loadedArticles = articles;
+    res.json(loadedArticles);
 });
 
 app.get('/*', (req, res) => {
